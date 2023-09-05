@@ -26,10 +26,10 @@ private:
     static constexpr int fftOrder = 10;
     static constexpr int fftSize = 1 << fftOrder;      // 1024 samples
     static constexpr int numBins = fftSize / 2 + 1;    // 513 bins
-    static constexpr int overlap = 4;                  // 25% overlap
+    static constexpr int overlap = 4;                  // 75% overlap
     static constexpr int hopSize = fftSize / overlap;  // 256 samples
 
-    // Gain correction for using Hann window with 25% overlap.
+    // Gain correction for using Hann window with 75% overlap.
     static constexpr float windowCorrection = 2.0f / 3.0f;
 
     juce::dsp::FFT fft;
